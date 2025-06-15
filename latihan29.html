@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JubelBook.id</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #e8cfbd;
+        font-family: "Funnel Sans", sans-serif;
+        justify-content: center;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: flex-end;
+        background: rgb(230, 96, 0);
+        align-items: center;
+        padding: 8px;
+      }
+      .topbar a {
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-left: 5px;
+        padding: 6px;
+        border: 1px solid;
+      }
+      .topbar .register,
+      .topbar .login {
+        background-color: rgb(230, 96, 0);
+      }
+      .topbar a:hover,
+      .topbar a:focus {
+        background: white;
+        color: black;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: rgb(232, 207, 189);
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #0d3c91;
+      }
+
+      .logo span {
+        color: rgb(230, 96, 0);
+      }
+
+      header input {
+        flex: 1;
+        margin: 0 10px;
+        padding: 8px;
+        border-radius: 0.3rem;
+      }
+
+      header button {
+        padding: 8px 10px;
+        border-color: rgb(230, 96, 0);
+        border-radius: 0.3rem;
+      }
+
+      .icon-user {
+        margin-left: 10px;
+      }
+
+      .navbar {
+        background: rgb(232, 207, 189);
+        padding: 1px;
+        border-top: 2px solid rgb(128, 117, 117);
+        border-bottom: 2px solid rgb(109, 102, 102);
+        text-align: center;
+        font-family: "Funnel Sans", sans-serif;
+      }
+
+      .navbar .menu {
+        list-style: none;
+        margin: 0 15px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .navbar .menu > li {
+        position: relative;
+      }
+
+      .navbar .menu > li > a {
+        display: block;
+        padding: 10px;
+        color: black;
+        font-size: georgia, serif;
+        text-decoration: none;
+      }
+
+      .navbar .menu > li:hover > a {
+        color: #333;
+      }
+
+      /*dropdown multilevel*/
+
+      .navbar .menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        min-width: 100px;
+        z-index: 999;
+      }
+
+      .navbar .menu li:hover > ul {
+        display: block;
+      }
+
+      .navbar .menu li ul li a {
+        background-color: rgb(204, 179, 161);
+        color: black;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 0.1rem;
+        border-right: 0.5px solid #110707;
+        text-align: left;
+      }
+
+      .navbar .menu li ul li a:hover {
+        background-color: rgb(210, 164, 131);
+        color: black;
+      }
+
+      /* submenu ke kanan*/
+      .navbar .menu li ul li {
+        position: relative;
+      }
+      .navbar .menu li ul li ul {
+        top: 0;
+        left: 100%;
+      }
+
+      .slider img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: contain;
+      }
+
+      .kategori-banner {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
+
+      .banner {
+        background: #e100ff;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+        width: 30%;
+      }
+
+      .container {
+        max-width: fit-content;
+        margin: auto;
+      }
+
+      .best-seller {
+        padding: 50px;
+        justify-content: center;
+      }
+
+      .best-seller h2 {
+        margin-bottom: 15px;
+      }
+
+      .produk-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 29px;
+      }
+
+      .produk {
+        width: 150px;
+        text-align: center;
+        background-color: rgb(232, 207, 189);
+        border: 0.1px solid;
+        border-radius: 1px;
+        border-color: #5d5e5e;
+        padding: 18px;
+        padding-inline: 28px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .produk img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #110707;
+      }
+
+      .produk:hover {
+        transform: translateY(2px) scale(1.03);
+        transition: transform 0.3s ease;
+      }
+
+      .judul {
+        font-weight: bold;
+        margin-top: 4px;
+        margin-bottom: 0px;
+        margin-left: 4px;
+        text-align: left;
+      }
+
+      .penulis {
+        font-size: 11px;
+        color: rgb(12, 6, 1);
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-left: 4px;
+        text-align: left;
+      }
+
+      .harga {
+        color: rgb(255, 0, 0);
+        font-weight: bold;
+        margin-top: auto;
+        margin-left: 4px;
+        text-align: left;
+      }
+    </style>
+
+    <!-- Topbar -->
+    <div class="topbar">
+      <a href="register.html" class="register">Registrasi</a>
+      <a href="login.html" class="login">Login</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <img src="Logo.png" alt="logo11" height="50px" />
+      <div class="logo">Jubel<span>Book</span>.id</div>
+      <input type="text" placeholder="" />
+      <button>🔍</button>
+      <div class="icon-user">👤</div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="link">HOME</a></li>
+        <li>
+          <a href="link">BUKU</a>
+          <ul>
+            <li>
+              <a href="link">Fiksi</a>
+              <ul>
+                <li><a href="link">Novel</a></li>
+                <li><a href="link">Komik</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="link">Non-Fiksi</a>
+              <ul>
+                <li><a href="..">Pendidikan</a></li>
+                <li><a href="..">Umum</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="link">MAJALAH</a></li>
+        <li><a href="link">KORAN</a></li>
+      </ul>
+    </nav>
+
+    <!-- Slider -->
+    <section class="slider">
+      <img src="Logo.png" alt="Slider Promo Buku" />
+    </section>
+
+    <div class="container">
+      <!-- Best Seller -->
+      <section class="best-seller">
+        <h2>Buku Best Seller</h2>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="link"><img src="buku1.jpg" alt="Buku 1" /></a>
+            <p class="judul">Cantik Itu Luka</p>
+            <p class="penulis">Eka Kurniawan</p>
+            <p class="harga">Rp 109.000</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="buku2.jpg" alt="Buku 2" /></a>
+            <p class="judul">Filosofi Teras</p>
+            <p class="penulis">Henry Menampiring</p>
+            <p class="harga">Rp 79.000</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="buku3.jpg" alt="Buku 3" /></a>
+            <p class="judul">
+              Atomic Habits: Perubahan Kecil yang memberikan hasil luar biasa
+            </p>
+            <p class="penulis">James Claer</p>
+            <p class="harga">Rp 99.000</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="buku4.jpg" alt="Buku 4" /></a>
+            <p class="judul">Berani Tidak Disukai</p>
+            <p class="penulis">Ichiro Khismi Fumitake Koga</p>
+            <p class="harga">Rp 109.000</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="buku5.jpg" alt="Buku 5" /></a>
+            <p class="judul">Perang Opium (The Poppy War)</p>
+            <p class="penulis">R. F. Kuang</p>
+            <p class="harga">Rp. 130.900</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="buku6.jpg" alt="Buku 6" /></a>
+            <p class="judul">
+              Seorang Pria yang Melalui Duka dengan Mencuci Piring
+            </p>
+            <p class="penulis">Dr. Andreas Kurniawan, sP. kj</p>
+            <p class="harga">Rp 79.000</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="best-seller">
+        <h2>Majalah Best Seller</h2>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="link"><img src="majalah1.jpg" alt="majalah 1" /></a>
+            <p class="judul">Cilukba Junior Edisi 107</p>
+            <p class="harga">Rp 76.500</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="majalah2.jpg" alt="majalah 2" /></a>
+            <p class="judul">Swadaya Edisi 271</p>
+            <p class="harga">Gratis</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="majalah3.jpg" alt="majalah 3" /></a>
+            <p class="judul">Print Media Edisi 124</p>
+            <p class="harga">Rp 63.750</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="majalah4.jpg" alt="majalah 4" /></a>
+            <p class="judul">Risalah NU Edisi 166</p>
+            <p class="harga">Rp 63.750</p>
+          </div>
+          <div class="produk">
+            <a href="link"><img src="majalah5.jpg" alt="majalah 5" /></a>
+            <p class="judul">Hidayatullah Edisi 01/XXXVII</p>
+            <p class="harga">Rp 56.750</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
