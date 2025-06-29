@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koran | JubelBook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        background-color: rgb(241, 241, 241);
+        font-family: "Funnel Sans", sans-serif;
+        justify-content: center;
+      }
+
+      .navbar {
+        background: rgb(241, 241, 241);
+        padding: 1px;
+        border-top: 1px solid rgb(192, 191, 191);
+        border-bottom: 1px solid rgb(192, 191, 191);
+        text-align: center;
+        font-family: "Funnel Sans", sans-serif;
+      }
+
+      .navbar .menu {
+        list-style: none;
+        margin: 0 15px;
+        padding: 1px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .navbar .menu > li {
+        position: relative;
+      }
+
+      .navbar .menu > li > a {
+        display: block;
+        padding: 10px;
+        color: black;
+        font-size: georgia, serif;
+        text-decoration: none;
+      }
+
+      .navbar .menu > li:hover > a {
+        color: #333;
+      }
+
+      /*dropdown multilevel*/
+
+      .navbar .menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        min-width: 100px;
+        z-index: 999;
+      }
+
+      .navbar .menu li:hover > ul {
+        display: block;
+      }
+
+      .navbar .menu li ul li a {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 0.1rem;
+        border-right: 0.5px solid #110707;
+      }
+
+      .navbar .menu li ul li a:hover {
+        background-color: rgb(232, 232, 232);
+        color: black;
+      }
+
+      /* submenu ke kanan*/
+      .navbar .menu li ul li {
+        position: relative;
+      }
+      .navbar .menu li ul li ul {
+        top: 0;
+        left: 100%;
+      }
+
+      .kategori-banner {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
+
+      .banner {
+        background: #e100ff;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+        width: 30%;
+      }
+
+      .container {
+        max-width: fit-content;
+        margin: auto;
+      }
+
+      .best-seller {
+        padding: 50px;
+        justify-content: center;
+      }
+
+      .best-seller h2 {
+        margin-bottom: 15px;
+        border-left: 4px solid #ff6b00;
+        padding-left: 10px;
+      }
+
+      .produk-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 29px;
+        margin-bottom: 29px;
+      }
+
+      .produk {
+        width: 150px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid;
+        border-radius: 1px;
+        border-color: #c5c5c5;
+        padding: 18px;
+        padding-inline: 22px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .produk img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #8b8b8b;
+      }
+
+      .produk:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .judul {
+        font-size: 14px;
+        margin-top: auto;
+        margin-bottom: 0px;
+        margin-left: 4px;
+        text-align: center;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="latihan29.html">HOME</a></li>
+        <li>
+          <a href="latihan103.html">BUKU</a>
+          <ul>
+            <li>
+              <a href="#">Fiksi</a>
+              <ul>
+                <li><a href="latihan33.html">Novel</a></li>
+                <li><a href="latihan34.html">Komik</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Non-Fiksi</a>
+              <ul>
+                <li><a href="latihan30.html">Komputer</a></li>
+                <li><a href="latihan31.html">Agama</a></li>
+                <li><a href="latihan32.html">Sience</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="latihan102.html">MAJALAH</a>
+          <ul>
+            <li><a href="latihan71.html">Anak</a></li>
+            <li><a href="latihan78.html">Bisnis Investasi</a></li>
+          </ul>
+        </li>
+        <li><a href="latihan86.html">KORAN</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- Best Seller -->
+      <section class="best-seller">
+        <h2>Koran</h2>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan87.html"><img src="koran1.webp" alt="koran1" /></a>
+            <p class="judul">Koran Jawa Pos</p>
+          </div>
+          <div class="produk">
+            <a href="latihan88.html"><img src="koran2.webp" alt="koran2" /></a>
+            <p class="judul">Metropolitan</p>
+          </div>
+          <div class="produk">
+            <a href="latihan89.html"><img src="koran3.webp" alt="koran3" /></a>
+            <p class="judul">Radar Semarang</p>
+          </div>
+          <div class="produk">
+            <a href="latihan90.html"><img src="koran4.webp" alt="koran4" /></a>
+            <p class="judul">Radar Solo</p>
+          </div>
+          <div class="produk">
+            <a href="latihan91.html"><img src="koran5.webp" alt="koran5" /></a>
+            <p class="judul">Kaltim Pos</p>
+          </div>
+        </div>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan92.html"><img src="koran6.webp" alt="koran5" /></a>
+            <p class="judul">Radar Tulungagung</p>
+          </div>
+          <div class="produk">
+            <a href="latihan93.html"><img src="koran7.webp" alt="koran5" /></a>
+            <p class="judul">Radar Surabaya</p>
+          </div>
+          <div class="produk">
+            <a href="latihan94.html"><img src="koran8.webp" alt="koran5" /></a>
+            <p class="judul">Radar Mojokerto</p>
+          </div>
+          <div class="produk">
+            <a href="latihan95.html"><img src="koran9.webp" alt="koran5" /></a>
+            <p class="judul">Radar Tuban</p>
+          </div>
+          <div class="produk">
+            <a href="latihan96.html"><img src="koran10.webp" alt="koran5" /></a>
+            <p class="judul">Padang Ekspress</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

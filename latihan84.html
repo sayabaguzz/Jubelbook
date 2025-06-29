@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JubelBook.id</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: rgb(241, 241, 241);
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .login-box {
+        background-color: #fff;
+        width: 300px;
+        padding: 30px;
+        margin: 100px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      .slider img {
+        width: 100%;
+        max-height: 150px;
+        object-fit: contain;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+
+      .remember-me {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 10px 0;
+      }
+
+      .remember-me label {
+        margin-left: 5px;
+      }
+
+      button {
+        background-color: rgb(230, 96, 0);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background-color: rgb(200, 80, 0);
+      }
+
+      .links {
+        margin-top: 15px;
+      }
+
+      .links a {
+        display: block;
+        color: rgb(230, 96, 0);
+        text-decoration: none;
+        font-size: 14px;
+        text-align: left;
+      }
+
+      .links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <div class="login-box">
+      <section class="slider">
+        <a href="latihan29.html"
+          ><img src="Logo.png" alt="Slider Promo Buku"
+        /></a>
+      </section>
+      <p>Sign in to start your session</p>
+      <form>
+        <input type="text" placeholder="Email / No.Telp" required />
+        <input type="password" placeholder="Password" required />
+        <div class="remember-me">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember Me</label>
+        </div>
+        <button type="submit">Sign In</button>
+      </form>
+      <div class="links">
+        <a href="za">I forgot my password</a>
+        <a href="latihan85.html">Register</a>
+      </div>
+    </div>
+  </body>
+</html>

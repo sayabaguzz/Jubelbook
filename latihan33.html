@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku - Novel | JubelBook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        background-color: rgb(241, 241, 241);
+        font-family: "Funnel Sans", sans-serif;
+        justify-content: center;
+      }
+
+      .navbar {
+        background: rgb(241, 241, 241);
+        padding: 1px;
+        border-top: 1px solid rgb(192, 191, 191);
+        border-bottom: 1px solid rgb(192, 191, 191);
+        text-align: center;
+        font-family: "Funnel Sans", sans-serif;
+      }
+
+      .navbar .menu {
+        list-style: none;
+        margin: 0 15px;
+        padding: 1px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .navbar .menu > li {
+        position: relative;
+      }
+
+      .navbar .menu > li > a {
+        display: block;
+        padding: 10px;
+        color: black;
+        font-size: georgia, serif;
+        text-decoration: none;
+      }
+
+      .navbar .menu > li:hover > a {
+        color: #333;
+      }
+
+      /*dropdown multilevel*/
+
+      .navbar .menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        min-width: 100px;
+        z-index: 999;
+      }
+
+      .navbar .menu li:hover > ul {
+        display: block;
+      }
+
+      .navbar .menu li ul li a {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 0.1rem;
+        border-right: 0.5px solid #110707;
+      }
+
+      .navbar .menu li ul li a:hover {
+        background-color: rgb(232, 232, 232);
+        color: black;
+      }
+
+      /* submenu ke kanan*/
+      .navbar .menu li ul li {
+        position: relative;
+      }
+      .navbar .menu li ul li ul {
+        top: 0;
+        left: 100%;
+      }
+
+      .kategori-banner {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
+
+      .banner {
+        background: #e100ff;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+        width: 30%;
+      }
+
+      .container {
+        max-width: fit-content;
+        margin: auto;
+      }
+
+      .best-seller {
+        padding: 50px;
+        justify-content: center;
+      }
+
+      .best-seller h2 {
+        margin-bottom: 15px;
+        border-left: 4px solid #ff6b00;
+        padding-left: 10px;
+      }
+
+      .produk-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 29px;
+        margin-bottom: 29px;
+      }
+
+      .produk {
+        width: 150px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid;
+        border-radius: 1px;
+        border-color: #c5c5c5;
+        padding: 18px;
+        padding-inline: 22px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .produk img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #8b8b8b;
+      }
+
+      .produk:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .judul {
+        font-weight: bold;
+        margin-top: 4px;
+        margin-bottom: 0px;
+        margin-left: 4px;
+        text-align: left;
+      }
+
+      .penulis {
+        font-size: 9px;
+        color: rgb(70, 70, 70);
+        margin-bottom: 12px;
+        margin-top: 0px;
+        margin-left: 4px;
+        text-align: left;
+      }
+
+      .harga {
+        font-size: 12px;
+        color: rgb(255, 0, 0);
+        margin-top: auto;
+        margin-left: 4px;
+        margin-bottom: 0px;
+        text-align: left;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="latihan29.html">HOME</a></li>
+        <li>
+          <a href="latihan103.html">BUKU</a>
+          <ul>
+            <li>
+              <a href="#">Fiksi</a>
+              <ul>
+                <li><a href="latihan33.html">Novel</a></li>
+                <li><a href="latihan34.html">Komik</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Non-Fiksi</a>
+              <ul>
+                <li><a href="latihan30.html">Komputer</a></li>
+                <li><a href="latihan31.html">Agama</a></li>
+                <li><a href="latihan32.html">Sience</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="latihan102.html">MAJALAH</a>
+          <ul>
+            <li><a href="latihan71.html">Anak</a></li>
+            <li><a href="latihan78.html">Bisnis Investasi</a></li>
+          </ul>
+        </li>
+        <li><a href="latihan86.html">KORAN</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- Best Seller -->
+      <section class="best-seller">
+        <h2>Novel</h2>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan61.html"><img src="novel1.jpg" alt="novel1" /></a>
+            <p class="judul">Buku Merah Batara dan Begawan</p>
+            <p class="penulis">Baba Kathaka</p>
+            <p class="harga">Rp 129.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan62.html"><img src="novel2.jpg" alt="novel2" /></a>
+            <p class="judul">Goddess Interrupted (The Goddess Test #2)</p>
+            <p class="penulis">Aimee Carter</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan63.html"><img src="novel3.jpg" alt="novel3" /></a>
+            <p class="judul">Ruang Gelap di Dalam Diri</p>
+            <p class="penulis">Tatan</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan64.html"><img src="novel4.jpg" alt="novel4" /></a>
+            <p class="judul">Kejahatan dan Hukuman</p>
+            <p class="penulis">Fyodor Dostoevsky</p>
+            <p class="harga">Rp 79.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan65.html"><img src="novel5.jpg" alt="novel5" /></a>
+            <p class="judul">Jagat Rajawali</p>
+            <p class="penulis">Eko Darmono</p>
+            <p class="harga">Rp 79.000</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

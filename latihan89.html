@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Radar Semarang - Subscription</title>
+    <style>
+      body {
+        margin: 0;
+        background: rgb(241, 241, 241);
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        padding: 30px 10px;
+      }
+      .card {
+        display: flex;
+        background: white;
+        border-radius: 3px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 1000px;
+        gap: 20px;
+        position: relative;
+      }
+      .image-details {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px; /* jarak gambar dengan detail */
+      }
+
+      .details {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .left {
+        flex: 1;
+        min-width: 280px;
+      }
+
+      .left img {
+        width: 220px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .left .description {
+        margin-top: 16px;
+        font-size: 9px;
+        line-height: 0.5;
+      }
+      .right {
+        flex: 0 0 320px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: left;
+      }
+      .subscription {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 30px 20px;
+      }
+      .subscription h3 {
+        margin: 0 0 16px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .package {
+        display: flex;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 8px;
+        cursor: pointer;
+        margin-bottom: 8px;
+        font-size: 12px;
+      }
+      .package:hover {
+        border-color: rgb(255, 106, 0);
+      }
+      .package input {
+        margin-right: 8px;
+        justify-content: center;
+      }
+      .package span {
+        margin-left: auto;
+      }
+      .buy-btn {
+        background: rgb(255, 106, 0);
+        color: white;
+        border: none;
+        padding: 11px 20px; /* lebih wajar */
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        text-align: center;
+        white-space: nowrap; /* mencegah teks pindah baris */
+        width: 100%; /* membuat tombol penuh lebar kolom */
+        box-sizing: border-box; /* padding tidak menambah lebar total */
+      }
+
+      .buy-btn:disabled {
+        background: rgb(255, 166, 103);
+        cursor: not-allowed;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .right {
+          width: 80%;
+        }
+      }
+      .details {
+        line-height: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="left">
+          <div class="image-details">
+            <img src="koran3.webp" alt="koran3" />
+            <div class="details">
+              <h2>Radar Semarang</h2>
+              <p>Edisi:</p>
+              <p><b> 28 June 2025</b></p>
+              <p>Halaman:</p>
+              <p><b> 8</b></p>
+              <p>Penerbit:</p>
+              <p><b> Radar Semarang</b></p>
+            </div>
+          </div>
+          <div class="description">
+            <p>Deskripsi:</p>
+            <p><b>Radar Semarang, 28 June 2025</b></p>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="subscription">
+            <h3>Pilih Harga Paket:</h3>
+            <form id="sub-form">
+              <label class="package">
+                <input type="radio" name="package" value="30000" />
+                1 Bulan
+                <span>IDR 30.000</span>
+              </label>
+              <label class="package">
+                <input type="radio" name="package" value="90000" />
+                3 Bulan
+                <span>IDR 90.000</span>
+              </label>
+              <label class="package">
+                <input type="radio" name="package" value="180000" />
+                6 Bulan
+                <span>IDR 180.000</span>
+              </label>
+              <label class="package">
+                <input type="radio" name="package" value="270000" />
+                9 Bulan
+                <span>IDR 270.000</span>
+              </label>
+              <label class="package">
+                <input type="radio" name="package" value="360000" />
+                1 Tahun
+                <span>IDR 360.000</span>
+              </label>
+              <button type="submit" class="buy-btn" disabled>
+                Beli Sekarang
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const form = document.getElementById("sub-form");
+      const buyBtn = form.querySelector(".buy-btn");
+      const radios = form.querySelectorAll('input[type="radio"]');
+
+      radios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          buyBtn.disabled = false;
+        });
+      });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const selected = form.package.value;
+        alert("Added package IDR " + selected + " to cart");
+      });
+    </script>
+  </body>
+</html>

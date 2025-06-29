@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku | JubelBook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        background-color: rgb(241, 241, 241);
+        font-family: "Funnel Sans", sans-serif;
+        justify-content: center;
+      }
+
+      .navbar {
+        background: rgb(241, 241, 241);
+        padding: 1px;
+        border-top: 1px solid rgb(192, 191, 191);
+        border-bottom: 1px solid rgb(192, 191, 191);
+        text-align: center;
+        font-family: "Funnel Sans", sans-serif;
+      }
+
+      .navbar .menu {
+        list-style: none;
+        margin: 0 15px;
+        padding: 1px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .navbar .menu > li {
+        position: relative;
+      }
+
+      .navbar .menu > li > a {
+        display: block;
+        padding: 10px;
+        color: black;
+        font-size: georgia, serif;
+        text-decoration: none;
+      }
+
+      .navbar .menu > li:hover > a {
+        color: #333;
+      }
+
+      /*dropdown multilevel*/
+
+      .navbar .menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        min-width: 100px;
+        z-index: 999;
+      }
+
+      .navbar .menu li:hover > ul {
+        display: block;
+      }
+
+      .navbar .menu li ul li a {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 0.1rem;
+        border-right: 0.5px solid #110707;
+      }
+
+      .navbar .menu li ul li a:hover {
+        background-color: rgb(232, 232, 232);
+        color: black;
+      }
+
+      /* submenu ke kanan*/
+      .navbar .menu li ul li {
+        position: relative;
+      }
+      .navbar .menu li ul li ul {
+        top: 0;
+        left: 100%;
+      }
+
+      .kategori-banner {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
+
+      .banner {
+        background: #e100ff;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+        width: 30%;
+      }
+
+      .container {
+        max-width: fit-content;
+        margin: auto;
+      }
+
+      .best-seller {
+        padding: 50px;
+        justify-content: center;
+      }
+
+      .best-seller h2 {
+        margin-bottom: 15px;
+        border-left: 4px solid #ff6b00;
+        padding-left: 10px;
+      }
+
+      .produk-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 29px;
+        margin-bottom: 29px;
+      }
+
+      .produk {
+        width: 150px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid;
+        border-radius: 1px;
+        border-color: #c5c5c5;
+        padding: 18px;
+        padding-inline: 22px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .produk img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #8b8b8b;
+      }
+
+      .produk:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .judul {
+        font-weight: bold;
+        margin-top: 4px;
+        margin-bottom: 0px;
+        margin-left: 4px;
+        text-align: left;
+      }
+
+      .penulis {
+        font-size: 9px;
+        color: rgb(70, 70, 70);
+        margin-bottom: 12px;
+        margin-top: 0px;
+        margin-left: 4px;
+        text-align: left;
+      }
+
+      .harga {
+        font-size: 12px;
+        color: rgb(255, 0, 0);
+        margin-top: auto;
+        margin-left: 4px;
+        margin-bottom: 0px;
+        text-align: left;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="latihan29.html">HOME</a></li>
+        <li>
+          <a href="latihan103.html">BUKU</a>
+          <ul>
+            <li>
+              <a href="#">Fiksi</a>
+              <ul>
+                <li><a href="latihan33.html">Novel</a></li>
+                <li><a href="latihan34.html">Komik</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Non-Fiksi</a>
+              <ul>
+                <li><a href="latihan30.html">Komputer</a></li>
+                <li><a href="latihan31.html">Agama</a></li>
+                <li><a href="latihan32.html">Sience</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="latihan102.html">MAJALAH</a>
+          <ul>
+            <li><a href="latihan71.html">Anak</a></li>
+            <li><a href="latihan78.html">Bisnis Investasi</a></li>
+          </ul>
+        </li>
+        <li><a href="latihan86.html">KORAN</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- Best Seller -->
+      <section class="best-seller">
+        <h2>Buku</h2>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan61.html"><img src="novel1.jpg" alt="novel1" /></a>
+            <p class="judul">Buku Merah Batara dan Begawan</p>
+            <p class="penulis">Baba Kathaka</p>
+            <p class="harga">Rp 129.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan62.html"><img src="novel2.jpg" alt="novel2" /></a>
+            <p class="judul">Goddess Interrupted (The Goddess Test #2)</p>
+            <p class="penulis">Aimee Carter</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan63.html"><img src="novel3.jpg" alt="novel3" /></a>
+            <p class="judul">Ruang Gelap di Dalam Diri</p>
+            <p class="penulis">Tatan</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan64.html"><img src="novel4.jpg" alt="novel4" /></a>
+            <p class="judul">Kejahatan dan Hukuman</p>
+            <p class="penulis">Fyodor Dostoevsky</p>
+            <p class="harga">Rp 79.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan65.html"><img src="novel5.jpg" alt="novel5" /></a>
+            <p class="judul">Jagat Rajawali</p>
+            <p class="penulis">Eko Darmono</p>
+            <p class="harga">Rp 79.000</p>
+          </div>
+        </div>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan45.html"
+              ><img src="komputer1.jpg" alt="komputer1"
+            /></a>
+            <p class="judul">212 Tips & Trik Excel 2010</p>
+            <p class="penulis">Hengky Alexander Mangkulo</p>
+            <p class="harga">Rp 49.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan46.html"
+              ><img src="komputer2.jpg" alt="komputer2"
+            /></a>
+            <p class="judul">212 Tips & Trik Access 2010</p>
+            <p class="penulis">Hengky Alexander Mangkulo</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan47.html"
+              ><img src="komputer3.jpg" alt="komputer3"
+            /></a>
+            <p class="judul">Program Lengkap Database POS dengan Python</p>
+            <p class="penulis">Ir. Yuniar SupardiShandhi Arishandhi, SKOM</p>
+            <p class="harga">Rp 109.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan48.html"
+              ><img src="komputer4.jpg" alt="komputer4"
+            /></a>
+            <p class="judul">
+              Mengenal Port Dan Fungsinya : Panduan Praktis Untuk Teknologi
+              Modern
+            </p>
+            <p class="penulis">
+              Dr. Ir. I Ketut Wiryajati, ST., MT., IPU., ASEAN.Eng.
+            </p>
+            <p class="harga">Rp 99.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan49.html"
+              ><img src="komputer5.jpg" alt="komputer5"
+            /></a>
+            <p class="judul">Melek AI: Transformasi Guru di Era Digital</p>
+            <p class="penulis">Andi Ridwan, S.Pd.I, M.Pd</p>
+            <p class="harga">Rp. 65.000</p>
+          </div>
+        </div>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan66.html"><img src="komik1.jpg" alt="komik1" /></a>
+            <p class="judul">Dua Purnama di Surga</p>
+            <p class="penulis">Jasmiko</p>
+            <p class="harga">Rp 149.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan67.html"><img src="komik2.jpg" alt="komik2" /></a>
+            <p class="judul">Disilih Ragane</p>
+            <p class="penulis">Nini Klenyem</p>
+            <p class="harga">Rp 99.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan68.html"><img src="komik3.jpg" alt="komik3" /></a>
+            <p class="judul">Mencari Si Belang</p>
+            <p class="penulis">Siska Indah Sari</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan69.html"><img src="komik4.jpg" alt="komik4" /></a>
+            <p class="judul">Kisah Tata dan Wawa</p>
+            <p class="penulis">Cendra Panni</p>
+            <p class="harga">Rp 79.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan70.html"><img src="komik5.jpg" alt="komik5" /></a>
+            <p class="judul">Kau Guruku yang Bisu</p>
+            <p class="penulis">Rasidi</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+        </div>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan35.html"><img src="agama1.jpg" alt="agama1" /></a>
+            <p class="judul">
+              Mintalah, Pasti Dikabulkan: Kumpulan Doa Sehari-hari
+            </p>
+            <p class="penulis">Gus Arifin</p>
+            <p class="harga">Rp 99.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan36.html"><img src="agama2.jpg" alt="agama2" /></a>
+            <p class="judul">
+              Qur`anic Stoicism Philosophy - Seni Mencapai Kebahagiaan dan
+              Mengelola Tekanan dengan Al-Quran
+            </p>
+            <p class="penulis">Safi Sahri</p>
+            <p class="harga">Rp 109.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan37.html"><img src="agama3.jpg" alt="agama3" /></a>
+            <p class="judul">Don`t Worry To Marry</p>
+            <p class="penulis">Keni Rahayu</p>
+            <p class="harga">Rp 35.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan38.html"><img src="agama4.jpg" alt="agama4" /></a>
+            <p class="judul">Doa Mustajab untuk Muslimah</p>
+            <p class="penulis">Wira Kautsari Wijayanti, Lc., MA.</p>
+            <p class="harga">Rp 79.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan39.html"><img src="agama5.jpg" alt="agama5" /></a>
+            <p class="judul">
+              Doa dan Zikir Mustajab (Dibaca Sehari-hari Sepanjang Masa)
+            </p>
+            <p class="penulis">Wira Kautsari Wijayanti, Lc., MA.</p>
+            <p class="harga">Rp. 79.00</p>
+          </div>
+        </div>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan40.html"><img src="agama6.jpg" alt="agama6" /></a>
+            <p class="judul">
+              Religiositas Islam Dan Implikasinya Pada Kinerja
+            </p>
+            <p class="penulis">Caecielia Makaginsar</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan41.html"><img src="agama7.jpg" alt="agama7" /></a>
+            <p class="judul">Bahasa Arab Untuk Haji</p>
+            <p class="penulis">Mochammad Firdaus</p>
+            <p class="harga">Rp 49.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan42.html"><img src="agama8.jpg" alt="agama8" /></a>
+            <p class="judul">
+              Ramadan Ala Mahasantri : Perspektif Dan Solusi Selektif Untuk
+              Ramadan
+            </p>
+            <p class="penulis">Farhan al-KhudriKhaer Ahmad</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan43.html"><img src="agama9.jpg" alt="agama9" /></a>
+            <p class="judul">TAFSIR FEMINIS QURAISH SHIHAB</p>
+            <p class="penulis">Shulhan Kholidi, S.Ag.</p>
+            <p class="harga">Rp 35.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan44.html"><img src="agama10.jpg" alt="agama10" /></a>
+            <p class="judul">KEPEMIMPINAN PENDIDIKAN ISLAM</p>
+            <p class="penulis">Dr. Suhendri, M.A.</p>
+            <p class="harga">Rp 49.000</p>
+          </div>
+        </div>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan51.html"><img src="sience1.jpg" alt="sience1" /></a>
+            <p class="judul">Sistem Monitoring Komputer</p>
+            <p class="penulis">Arinto Yudi Ponco Wardoyo</p>
+            <p class="harga">Rp 399.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan52.html"><img src="sience2.jpg" alt="sience2" /></a>
+            <p class="judul">
+              PEMBERDAYAAN PEREMPUAN (Pengolahan Limbah Sagu menjadi Pakan
+              Ternak Bebek)
+            </p>
+            <p class="penulis">Dr. Usiono, M.A.Eka Yusnaldi, S.Pd., M.Pd.</p>
+            <p class="harga">Rp 49.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan53.html"><img src="sience3.jpg" alt="sience3" /></a>
+            <p class="judul">Human Nature</p>
+            <p class="penulis">Kate Marvel</p>
+            <p class="harga">Rp 49.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan54.html"><img src="sience4.jpg" alt="sience4" /></a>
+            <p class="judul">
+              ENSIKLOPEDIA TANAMAN HIAS PEKARANGAN POTENSI DAN MANFAATNYA
+            </p>
+            <p class="penulis">
+              Vita Indri Febriani, S.Pd., M.PdAnnisa Fadillah, S.PdDra. Hj.
+              Musdalifah Nurdin, M.SiDr. Lilies, M.P
+            </p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan55.html"><img src="sience5.jpg" alt="sience5" /></a>
+            <p class="judul">Dasar-Dasar Penangkapan Ikan</p>
+            <p class="penulis">
+              Agustinus TupamahuHarunaGrace Barbara HutubessyStany Rachel
+              Siahainenia
+            </p>
+            <p class="harga">Rp 129.000</p>
+          </div>
+        </div>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan56.html"><img src="sience6.jpg" alt="sience6" /></a>
+            <p class="judul">Manual Pemeriksaan Neurologi Umum</p>
+            <p class="penulis">
+              Valentinus BesinWardah Rahmatul IslamiyahFarizky Martriano
+              HumardaniStephanie WirakasaElita Halimsetiono
+            </p>
+            <p class="harga">Rp 99.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan57.html"><img src="sience7.jpg" alt="sience7" /></a>
+            <p class="judul">Budidaya Sayuran Tropis</p>
+            <p class="penulis">Prof. Dr. H. Zulkarnain</p>
+            <p class="harga">Rp 99.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan58.html"><img src="sience8.jpg" alt="sience8" /></a>
+            <p class="judul">
+              Komunikasi Lingkungan Konsep Kunci dan Studi Kasus Terkini di Asia
+              dan Indonesia
+            </p>
+            <p class="penulis">Syahirul Alim</p>
+            <p class="harga">Rp 159.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan59.html"><img src="sience9.jpg" alt="sience9" /></a>
+            <p class="judul">
+              Siklus Hidup Perusahaan: Dampak Eko-Efisiensi, Inovasi Hijau, dan
+              Kinerja Keberlanjutan terhadap Nilai Perusahaan
+            </p>
+            <p class="penulis">Sari Mustika Widyastuti</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan60.html"
+              ><img src="sience10.jpg" alt="sience10"
+            /></a>
+            <p class="judul">Geologi Dasar Edisi Kedua</p>
+            <p class="penulis">HasriaSara Septiana</p>
+            <p class="harga">Rp 299.000</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

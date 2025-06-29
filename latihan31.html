@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku - Agama | JubelBook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        background-color: rgb(241, 241, 241);
+        font-family: "Funnel Sans", sans-serif;
+        justify-content: center;
+      }
+
+      .navbar {
+        background: rgb(241, 241, 241);
+        padding: 1px;
+        border-top: 1px solid rgb(192, 191, 191);
+        border-bottom: 1px solid rgb(192, 191, 191);
+        text-align: center;
+        font-family: "Funnel Sans", sans-serif;
+      }
+
+      .navbar .menu {
+        list-style: none;
+        margin: 0 15px;
+        padding: 1px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .navbar .menu > li {
+        position: relative;
+      }
+
+      .navbar .menu > li > a {
+        display: block;
+        padding: 10px;
+        color: black;
+        font-size: georgia, serif;
+        text-decoration: none;
+      }
+
+      .navbar .menu > li:hover > a {
+        color: #333;
+      }
+
+      /*dropdown multilevel*/
+
+      .navbar .menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        min-width: 100px;
+        z-index: 999;
+      }
+
+      .navbar .menu li:hover > ul {
+        display: block;
+      }
+
+      .navbar .menu li ul li a {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        border-radius: 0.1rem;
+        border-right: 0.5px solid #110707;
+      }
+
+      .navbar .menu li ul li a:hover {
+        background-color: rgb(232, 232, 232);
+        color: black;
+      }
+
+      /* submenu ke kanan*/
+      .navbar .menu li ul li {
+        position: relative;
+      }
+      .navbar .menu li ul li ul {
+        top: 0;
+        left: 100%;
+      }
+
+      .kategori-banner {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
+
+      .banner {
+        background: #e100ff;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+        width: 30%;
+      }
+
+      .container {
+        max-width: fit-content;
+        margin: auto;
+      }
+
+      .best-seller {
+        padding: 50px;
+        justify-content: center;
+      }
+
+      .best-seller h2 {
+        margin-bottom: 15px;
+        border-left: 4px solid #ff6b00;
+        padding-left: 10px;
+      }
+
+      .produk-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 29px;
+        margin-bottom: 29px;
+      }
+
+      .produk {
+        width: 150px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid;
+        border-radius: 1px;
+        border-color: #c5c5c5;
+        padding: 18px;
+        padding-inline: 22px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .produk img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #8b8b8b;
+      }
+
+      .produk:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .judul {
+        font-weight: bold;
+        margin-top: 4px;
+        margin-bottom: 0px;
+        margin-left: 4px;
+        text-align: left;
+      }
+
+      .penulis {
+        font-size: 9px;
+        color: rgb(70, 70, 70);
+        margin-bottom: 12px;
+        margin-top: 0px;
+        margin-left: 4px;
+        text-align: left;
+      }
+
+      .harga {
+        font-size: 12px;
+        color: rgb(255, 0, 0);
+        margin-top: auto;
+        margin-left: 4px;
+        margin-bottom: 0px;
+        text-align: left;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="latihan29.html">HOME</a></li>
+        <li>
+          <a href="latihan103.html">BUKU</a>
+          <ul>
+            <li>
+              <a href="#">Fiksi</a>
+              <ul>
+                <li><a href="latihan33.html">Novel</a></li>
+                <li><a href="latihan34.html">Komik</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Non-Fiksi</a>
+              <ul>
+                <li><a href="latihan30.html">Komputer</a></li>
+                <li><a href="latihan31.html">Agama</a></li>
+                <li><a href="latihan32.html">Sience</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="latihan102.html">MAJALAH</a>
+          <ul>
+            <li><a href="latihan71.html">Anak</a></li>
+            <li><a href="latihan78.html">Bisnis Investasi</a></li>
+          </ul>
+        </li>
+        <li><a href="latihan86.html">KORAN</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- Best Seller -->
+      <section class="best-seller">
+        <h2>Agama</h2>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan35.html"><img src="agama1.jpg" alt="agama1" /></a>
+            <p class="judul">
+              Mintalah, Pasti Dikabulkan: Kumpulan Doa Sehari-hari
+            </p>
+            <p class="penulis">Gus Arifin</p>
+            <p class="harga">Rp 99.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan36.html"><img src="agama2.jpg" alt="agama2" /></a>
+            <p class="judul">
+              Qur`anic Stoicism Philosophy - Seni Mencapai Kebahagiaan dan
+              Mengelola Tekanan dengan Al-Quran
+            </p>
+            <p class="penulis">Safi Sahri</p>
+            <p class="harga">Rp 109.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan37.html"><img src="agama3.jpg" alt="agama3" /></a>
+            <p class="judul">Don`t Worry To Marry</p>
+            <p class="penulis">Keni Rahayu</p>
+            <p class="harga">Rp 35.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan38.html"><img src="agama4.jpg" alt="agama4" /></a>
+            <p class="judul">Doa Mustajab untuk Muslimah</p>
+            <p class="penulis">Wira Kautsari Wijayanti, Lc., MA.</p>
+            <p class="harga">Rp 79.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan39.html"><img src="agama5.jpg" alt="agama5" /></a>
+            <p class="judul">
+              Doa dan Zikir Mustajab (Dibaca Sehari-hari Sepanjang Masa)
+            </p>
+            <p class="penulis">Wira Kautsari Wijayanti, Lc., MA.</p>
+            <p class="harga">Rp. 79.00</p>
+          </div>
+        </div>
+        <div class="produk-grid">
+          <div class="produk">
+            <a href="latihan40.html"><img src="agama6.jpg" alt="agama6" /></a>
+            <p class="judul">
+              Religiositas Islam Dan Implikasinya Pada Kinerja
+            </p>
+            <p class="penulis">Caecielia Makaginsar</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan41.html"><img src="agama7.jpg" alt="agama7" /></a>
+            <p class="judul">Bahasa Arab Untuk Haji</p>
+            <p class="penulis">Mochammad Firdaus</p>
+            <p class="harga">Rp 49.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan42.html"><img src="agama8.jpg" alt="agama8" /></a>
+            <p class="judul">
+              Ramadan Ala Mahasantri : Perspektif Dan Solusi Selektif Untuk
+              Ramadan
+            </p>
+            <p class="penulis">Farhan al-KhudriKhaer Ahmad</p>
+            <p class="harga">Rp 65.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan43.html"><img src="agama9.jpg" alt="agama9" /></a>
+            <p class="judul">TAFSIR FEMINIS QURAISH SHIHAB</p>
+            <p class="penulis">Shulhan Kholidi, S.Ag.</p>
+            <p class="harga">Rp 35.000</p>
+          </div>
+          <div class="produk">
+            <a href="latihan44.html"><img src="agama10.jpg" alt="agama10" /></a>
+            <p class="judul">KEPEMIMPINAN PENDIDIKAN ISLAM</p>
+            <p class="penulis">Dr. Suhendri, M.A.</p>
+            <p class="harga">Rp 49.000</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
